@@ -4779,6 +4779,7 @@ EOF
     export CONTAINER_INSTALLING=true
 
     local _install_script
+    echo "CURL: https://raw.githubusercontent.com/dkaaven/eurooffice-helper-script/main/install/${var_install}.sh"
     _install_script="$(curl -fsSL "https://raw.githubusercontent.com/dkaaven/eurooffice-helper-script/main/install/${var_install}.sh")"
     lxc-attach -n "$CTID" -- bash -c "$_install_script"
     local lxc_exit=$?
