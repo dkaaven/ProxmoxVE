@@ -32,13 +32,8 @@ if ! command -v curl >/dev/null 2>&1; then
   apt update >/dev/null 2>&1
   apt install -y curl >/dev/null 2>&1
 fi
-<<<<<<< HEAD
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/error_handler.func)
-=======
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/error_handler.func)
->>>>>>> 6e1d1e421 (fixing)
+source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
+source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
 load_functions
 catch_errors
 
@@ -427,11 +422,7 @@ EOF
   post_progress_to_api
 
   local tools_content
-<<<<<<< HEAD
-  tools_content=$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/tools.func) || {
-=======
-  tools_content=$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/tools.func) || {
->>>>>>> 6e1d1e421 (fixing)
+  tools_content=$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func) || {
     msg_error "Failed to download tools.func"
     exit 115
   }
@@ -519,11 +510,7 @@ EOF
     systemctl restart "$(basename "$(dirname "$GETTY_OVERRIDE")" | sed 's/\.d//')"
     msg_ok "Customized Container"
   fi
-<<<<<<< HEAD
-  echo 'set -a; [ -f /etc/profile.d/90-http-proxy.sh ] && . /etc/profile.d/90-http-proxy.sh; set +a; bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/ct/'"${app}"'.sh)"' >/usr/bin/update
-=======
-  echo 'set -a; [ -f /etc/profile.d/90-http-proxy.sh ] && . /etc/profile.d/90-http-proxy.sh; set +a; bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/ct/'"${app}"'.sh)"' >/usr/bin/update
->>>>>>> 6e1d1e421 (fixing)
+  echo 'set -a; [ -f /etc/profile.d/90-http-proxy.sh ] && . /etc/profile.d/90-http-proxy.sh; set +a; bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/'"${app}"'.sh)"' >/usr/bin/update
   chmod +x /usr/bin/update
 
   if [[ -n "${SSH_AUTHORIZED_KEY}" ]]; then

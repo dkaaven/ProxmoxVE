@@ -5,11 +5,7 @@
 # License: MIT
 # https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Execute within the Proxmox shell
-<<<<<<< HEAD
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/pve/hw-acceleration.sh)"
-=======
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/pve/hw-acceleration.sh)"
->>>>>>> 6e1d1e421 (fixing)
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/hw-acceleration.sh)"
 
 set -e
 function header_info {
@@ -35,11 +31,7 @@ CM="${GN}✓${CL}"
 set -e
 
 # Telemetry
-<<<<<<< HEAD
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
-=======
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
->>>>>>> 6e1d1e421 (fixing)
+source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "hw-acceleration" "pve"
 
 header_info

@@ -8,19 +8,11 @@
 # The update script is downloaded once, displayed for review, and installed
 # locally. Cron runs the local copy — no remote code execution at runtime.
 #
-<<<<<<< HEAD
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/pve/cron-update-lxcs.sh)"
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/cron-update-lxcs.sh)"
 
 set -euo pipefail
 
-REPO_URL="https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main"
-=======
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/pve/cron-update-lxcs.sh)"
-
-set -euo pipefail
-
-REPO_URL="https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main"
->>>>>>> 6e1d1e421 (fixing)
+REPO_URL="https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main"
 SCRIPT_URL="${REPO_URL}/tools/pve/update-lxcs-cron.sh"
 LOCAL_SCRIPT="/usr/local/bin/update-lxcs.sh"
 CONF_FILE="/etc/update-lxcs.conf"

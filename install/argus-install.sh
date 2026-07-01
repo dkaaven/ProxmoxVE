@@ -57,11 +57,7 @@ service:
       url: community-scripts/ProxmoxVE
       use_prerelease: false
     dashboard:
-<<<<<<< HEAD
-      icon: https://raw.githubusercontent.com/dkaaven/ProxmoxVE/refs/heads/main/misc/images/logo.png
-=======
-      icon: https://raw.githubusercontent.com/dkaaven/ProxmoxVE/refs/heads/main/misc/images/logo.png
->>>>>>> 6e1d1e421 (fixing)
+      icon: https://raw.githubusercontent.com/community-scripts/ProxmoxVE/refs/heads/main/misc/images/logo.png
       icon_link_to: https://community-scripts.org/
       web_url: https://github.com/community-scripts/ProxmoxVE/releases
 EOF

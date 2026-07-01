@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/build.func)
-=======
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/build.func)
->>>>>>> 6e1d1e421 (fixing)
+source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
@@ -41,7 +37,7 @@ function update_script() {
     "2" "Set Admin Token")
 
   if [ "$UPD" == "1" ]; then
-    INSTALLED_VERSION="$(/opt/vaultwarden/bin/vaultwarden --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -n1)"
+    INSTALLED_VERSION="$(/opt/vaultwarden/bin/vaultwarden --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -n1 || true)"
     if [[ -n "$INSTALLED_VERSION" ]] &&
       ! grep -qxF "$INSTALLED_VERSION" "$HOME/.vaultwarden" 2>/dev/null; then
       printf '%s\n' "$INSTALLED_VERSION" >"$HOME/.vaultwarden"

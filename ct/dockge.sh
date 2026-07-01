@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/build.func)
-=======
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/build.func)
->>>>>>> 6e1d1e421 (fixing)
+source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster) | Migration: MickLesk (CanbiZ)
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
@@ -24,11 +20,7 @@ variables
 color
 catch_errors
 
-<<<<<<< HEAD
-ADDON_SCRIPT="https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/addon/dockge.sh"
-=======
-ADDON_SCRIPT="https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/addon/dockge.sh"
->>>>>>> 6e1d1e421 (fixing)
+ADDON_SCRIPT="https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/dockge.sh"
 
 function update_script() {
   header_info
@@ -59,11 +51,7 @@ function update_script() {
   msg_info "Migrating update function"
   TMP_UPDATE=$(mktemp)
   cat <<'MIGRATION_EOF' >"$TMP_UPDATE"
-<<<<<<< HEAD
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/addon/dockge.sh)"
-=======
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/addon/dockge.sh)"
->>>>>>> 6e1d1e421 (fixing)
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/dockge.sh)"
 MIGRATION_EOF
   mv "$TMP_UPDATE" /usr/bin/update
   chmod +x /usr/bin/update

@@ -5,13 +5,8 @@
 # License: MIT
 # https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 
-<<<<<<< HEAD
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/refs/heads/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
-=======
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/refs/heads/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
->>>>>>> 6e1d1e421 (fixing)
+source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/refs/heads/main/misc/core.func)
+source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 load_functions
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "disk-health" "pve"
 

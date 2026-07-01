@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/build.func)
-=======
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/build.func)
->>>>>>> 6e1d1e421 (fixing)
+source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ) | Co-Author: CrazyWolf13
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
@@ -55,11 +51,7 @@ function update_script() {
 ReadWritePaths=-/appdata/redis -/var/lib/redis -/var/log/redis -/var/run/redis -/etc/redis
 EOF
       systemctl daemon-reload
-<<<<<<< HEAD
-      rm /opt/run_homarr.sh
-=======
       rm -f /opt/run_homarr.sh
->>>>>>> 6e1d1e421 (fixing)
       msg_ok "Fixed old structure"
     fi
 
@@ -76,11 +68,7 @@ EOF
     cp /opt/homarr/redis.conf /etc/redis/redis.conf
     sed -i -e '$a\' /etc/redis/redis.conf
     grep -q '^bind 127.0.0.1 -::1$' /etc/redis/redis.conf || echo "bind 127.0.0.1 -::1" >> /etc/redis/redis.conf
-<<<<<<< HEAD
-    rm /etc/nginx/nginx.conf
-=======
     rm -f /etc/nginx/nginx.conf
->>>>>>> 6e1d1e421 (fixing)
     cp /opt/homarr/nginx.conf /etc/nginx/templates/nginx.conf
     msg_ok "Updated Homarr"
 

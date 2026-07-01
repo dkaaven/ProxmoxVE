@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/build.func)
-=======
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/build.func)
->>>>>>> 6e1d1e421 (fixing)
+source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
@@ -24,11 +20,7 @@ variables
 color
 catch_errors
 
-<<<<<<< HEAD
-ADDON_SCRIPT="https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/addon/komodo.sh"
-=======
-ADDON_SCRIPT="https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/addon/komodo.sh"
->>>>>>> 6e1d1e421 (fixing)
+ADDON_SCRIPT="https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/komodo.sh"
 
 function update_script() {
   if [[ ! -d /opt/komodo ]]; then
@@ -61,11 +53,7 @@ function update_script() {
   msg_info "Migrating update function"
   TMP_UPDATE=$(mktemp)
   cat <<'MIGRATION_EOF' >"$TMP_UPDATE"
-<<<<<<< HEAD
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/addon/komodo.sh)"
-=======
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/addon/komodo.sh)"
->>>>>>> 6e1d1e421 (fixing)
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/komodo.sh)"
 MIGRATION_EOF
   mv "$TMP_UPDATE" /usr/bin/update
   chmod +x /usr/bin/update

@@ -118,11 +118,7 @@ TS="$(date -Iseconds)"
 read -r -d '' DISCORD_PAYLOAD <<JSON || true
 {
   "username": "Proxmox - ${NODE}",
-<<<<<<< HEAD
-  "avatar_url": "https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/images/logo-81x112.png",
-=======
-  "avatar_url": "https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/images/logo-81x112.png",
->>>>>>> 6e1d1e421 (fixing)
+  "avatar_url": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
   "embeds": [{
     "title": "✅ ${APP} LXC created",
     "description": "A new community-script LXC has been provisioned on **${NODE}**.",

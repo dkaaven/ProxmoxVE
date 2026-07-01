@@ -124,8 +124,4 @@ info "Successfully Transferred Data."
 
 # Use to copy all data from a Home Assistant Container LXC to a Home Assistant Core LXC
 # run from the Proxmox Shell
-<<<<<<< HEAD
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/mainmain/tools/copy-data//home-assistant-container-copy-data-home-assistant-core.sh)"
-=======
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/mainmain/tools/copy-data//home-assistant-container-copy-data-home-assistant-core.sh)"
->>>>>>> 6e1d1e421 (fixing)
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/mainmain/tools/copy-data//home-assistant-container-copy-data-home-assistant-core.sh)"

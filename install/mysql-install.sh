@@ -63,11 +63,7 @@ msg_ok "MySQL Server configured"
 
 read -r -p "${TAB3}Would you like to add PhpMyAdmin? <y/N> " prompt
 if [[ ${prompt,,} =~ ^(y|yes)$ ]]; then
-<<<<<<< HEAD
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/addon/phpmyadmin.sh)"
-=======
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/tools/addon/phpmyadmin.sh)"
->>>>>>> 6e1d1e421 (fixing)
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/phpmyadmin.sh)"
 fi
 
 msg_info "Start Service"

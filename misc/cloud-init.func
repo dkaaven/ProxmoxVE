@@ -17,11 +17,7 @@
 #   - Cloud-Init status monitoring and waiting
 #
 # Usage:
-<<<<<<< HEAD
-#   source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/cloud-init.func)
-=======
-#   source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/cloud-init.func)
->>>>>>> 6e1d1e421 (fixing)
+#   source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/cloud-init.func)
 #   setup_cloud_init "$VMID" "$STORAGE" "$HN" "yes"
 #
 # Compatible with: Debian, Ubuntu, and all Cloud-Init enabled distributions

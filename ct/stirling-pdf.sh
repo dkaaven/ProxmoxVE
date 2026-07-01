@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/build.func)
-=======
-source <(curl -fsSL https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/build.func)
->>>>>>> 6e1d1e421 (fixing)
+source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
@@ -41,6 +37,11 @@ function update_script() {
 
     PYTHON_VERSION="3.12" setup_uv
     JAVA_VERSION="25" setup_java
+
+    msg_info "Patching Native Libraries for LXC Compatibility"
+    ensure_dependencies patchelf
+    find /usr/lib -name "libicudata.so.*" -exec patchelf --clear-execstack {} \; || true
+    msg_ok "Patched Native Libraries"
 
     msg_info "Stopping Services"
     systemctl stop stirlingpdf libreoffice-listener unoserver

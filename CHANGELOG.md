@@ -1,10 +1,6 @@
 ﻿<div align="center">
   <a href="#">
-<<<<<<< HEAD
-    <img src="https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/images/logo.png" height="100px" />
-=======
-    <img src="https://raw.githubusercontent.com/dkaaven/ProxmoxVE/main/misc/images/logo.png" height="100px" />
->>>>>>> 6e1d1e421 (fixing)
+    <img src="https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo.png" height="100px" />
  </a>
 </div>
 <h1 align="center">Changelog</h1>
@@ -493,8 +489,6 @@ Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit 
 
 </details>
 
-<<<<<<< HEAD
-=======
 ## 2026-07-01
 
 ### 🆕 New Scripts
@@ -505,6 +499,9 @@ Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit 
 
   - #### 🐞 Bug Fixes
 
+    - Stirling-PDF: patch libicudata execstack flag for LXC container compatibility [@MickLesk](https://github.com/MickLesk) ([#15531](https://github.com/community-scripts/ProxmoxVE/pull/15531))
+    - FlowiseAI: align install to use pnpm instead of npm to fix missing dependencies [@MickLesk](https://github.com/MickLesk) ([#15530](https://github.com/community-scripts/ProxmoxVE/pull/15530))
+    - Vaultwarden: handle version detection failure gracefully in update [@MickLesk](https://github.com/MickLesk) ([#15526](https://github.com/community-scripts/ProxmoxVE/pull/15526))
     - homarr: fix: update-fail [@CrazyWolf13](https://github.com/CrazyWolf13) ([#15512](https://github.com/community-scripts/ProxmoxVE/pull/15512))
     - n8n: pin version to 2.27.5 [@tremor021](https://github.com/tremor021) ([#15516](https://github.com/community-scripts/ProxmoxVE/pull/15516))
 
@@ -512,7 +509,13 @@ Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit 
 
     - [arm64] feat: iventory arm64 support [@asylumexp](https://github.com/asylumexp) ([#15521](https://github.com/community-scripts/ProxmoxVE/pull/15521))
 
->>>>>>> 6e1d1e421 (fixing)
+### 💾 Core
+
+  - #### 🐞 Bug Fixes
+
+    - core: fix SDN vnet network parameter to use bridge instead of vnet [@MickLesk](https://github.com/MickLesk) ([#15527](https://github.com/community-scripts/ProxmoxVE/pull/15527))
+    - tools.func: use safe variable expansion in check_for_gh_release RETURN trap [@MickLesk](https://github.com/MickLesk) ([#15529](https://github.com/community-scripts/ProxmoxVE/pull/15529))
+
 ## 2026-06-30
 
 ### 🚀 Updated Scripts
